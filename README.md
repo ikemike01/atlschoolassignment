@@ -29,8 +29,6 @@ The page includes fragment identifier navigation allowing direct links to specif
 ## 🚀 Technologies Used
 
 - HTML5
-- CSS3 (Vanilla)
-- JavaScript (ES6+)
 - Fragment Identifiers for Navigation
 
 ## 👨‍💻 About Me
@@ -46,4 +44,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Live Demo**: [View on GitHub Pages](https://YOUR_USERNAME.github.io/personal-webpage/)
+**Live Demo**: [View on GitHub Pages](https://ikemike01.github.io/atlschoolassignment/)
