@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayibatonye Ikemike - AltSchool Profile</title>
+</head>
+<body>
+    <div class="container">
+        <header id="top">
+            <div class="header-content">
+                <h1>Ayibatonye Ikemike</h1>
+                <div class="altschool-id">AltSchool ID: ALT/SOE/025/4827</div>
+                <nav>
+                    <ul>
+                        <li><a href="#basic-info">Basic Information</a></li>
+                        <li><a href="#biography">Biography</a></li>
+                        <li><a href="#why-joined">Why I Joined</a></li>
+                        <li><a href="#goals">My Goals</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="basic-info" class="content-section">
+                <h2>Basic Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Full Name</div>
+                        <div class="info-value">Ayibatonye Ikemike</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Gender</div>
+                        <div class="info-value">Male</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Country of Origin</div>
+                        <div class="info-value">Nigeria</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State of Origin</div>
+                        <div class="info-value">Bayelsa State</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Current Location</div>
+                        <div class="info-value">Lagos, Nigeria</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Employment Status</div>
+                        <div class="info-value">Employed</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Marital Status</div>
+                        <div class="info-value">Married</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">AltSchool ID</div>
+                        <div class="info-value">ALT/SOE/025/4827</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="biography" class="content-section">
+                <h2>Biography</h2>
+                <div class="biography-text">
+                    My name is Ayibatonye Ikemike, a dedicated and passionate individual from Bayelsa State, Nigeria, currently living and working in Lagos. I am married and currently employed, with a strong desire to advance my career in the tech industry. I have a deep interest in technology and problem-solving, which has continually fueled my motivation to expand my knowledge and skill set.
+                </div>
+            </section>
+
+            <section id="why-joined" class="content-section">
+                <h2>Why I Joined the AltSchool School of Engineering Program</h2>
+                <div class="why-joined-text">
+                    I joined the AltSchool School of Engineering program because I believe in the power of hands-on, structured, and industry-relevant education. AltSchool presents a unique opportunity to learn directly from seasoned professionals and to build practical experience in a collaborative learning environment. The flexibility of the program and its focus on real-world applications made it the perfect choice for someone like me who is eager to transition into a more specialized tech role while balancing work and family life.
+                </div>
+            </section>
+
+            <section id="goals" class="content-section">
+                <h2>Goals for the Program</h2>
+                <div class="goals-text">
+                    My primary goal for joining this program is to become well-equipped with the requisite knowledge and practical skills in Cloud Engineering and DevOps. I aim to master the tools, technologies, and best practices necessary to design, deploy, and manage scalable infrastructure. Ultimately, I intend to leverage these skills to pursue a senior-level career in Cloud and DevOps engineering, contributing meaningfully to tech-driven organizations and delivering solutions that solve complex infrastructure problems.
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ayibatonye Ikemike. AltSchool School of Engineering Student.</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Back to top button functionality
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add highlight animation when navigating to sections
+        function highlightSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('section-highlight');
+                setTimeout(() => {
+                    section.classList.remove('section-highlight');
+                }, 2000);
+            }
+        }
+
+        // Handle hash changes for fragment navigation
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                setTimeout(() => highlightSection(hash), 100);
+            }
+        });
+
+        // Handle initial page load with hash
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                setTimeout(() => highlightSection(hash), 100);
+            }
+        });
+
+        // Enhanced navigation with smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update URL hash
+                    history.pushState(null, null, this.getAttribute('href'));
+                    
+                    // Highlight the section
+                    const sectionId = this.getAttribute('href').substring(1);
+                    setTimeout(() => highlightSection(sectionId), 100);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
