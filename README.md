@@ -33,7 +33,7 @@ A professional website showcasing my personal information, biography, and goals 
 
 **Name**: Ayibatonye Ikemike  
 **AltSchool ID**: ALT/SOE/025/4827  
-**Program**: Cloud Engineering                            
+**Program**: Cloud Engineering & DevOps  
 **Location**: Lagos, Nigeria  
 **Origin**: Bayelsa State, Nigeria  
 **Status**: Married & Employed
